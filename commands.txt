@@ -133,3 +133,12 @@ docker run -it -d --name adminer \
 -p 8082:8080 --network techbankNet \
  -e ADMINER_DEFAULT_SERVER=mysql-container \
 --restart always adminer:latest
+
+
+postgres
+docker run -d --name postgres-container -p 5433:5432 \
+--network techbankNet \
+-e POSTGRES_PASSWORD=techbankRootPsw \
+--restart always \
+-v postgresql_data:/var/lib/postgresql/data \
+postgres:latest

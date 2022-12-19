@@ -3,14 +3,25 @@ server:
 
 spring:
   jpa:
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    #Postgresql JPA
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
     show-sql: true
     hibernate:
       ddl-auto: update
+    #MySQL JPA
+#    database-platform: org.hibernate.dialect.MySQL8Dialect
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
   datasource:
-    url: jdbc:mysql://localhost:3306/bankAccount?createDatabaseIfNotExist=true
-    username: root
+    #PostGreSQL Datasource
+    url: jdbc:postgresql://localhost:5433/bankAccount
+    username: postgres
     password: techbankRootPsw
+    #MySQL Datasource
+#    url: jdbc:mysql://localhost:3306/bankAccount?createDatabaseIfNotExist=true
+#    username: root
+#    password: techbankRootPsw
 
   kafka:
     listener:
