@@ -1,6 +1,5 @@
-package br.com.adrianomenezes.account.common.events;
+package br.com.adrianomenezes.account.common.dto;
 
-import br.com.adrianomenezes.cqrs.core.events.BaseEvent;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,5 +8,8 @@ import lombok.experimental.SuperBuilder;
 @Data
 @SuperBuilder
 @NoArgsConstructor
-public class AccountClosedEvent extends BaseEvent {
+@AllArgsConstructor
+public class BaseResponse {
+    private String message;
+
 }

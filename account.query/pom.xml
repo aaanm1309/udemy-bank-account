@@ -50,6 +50,18 @@
 			<artifactId>spring-kafka-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Internal dependencies -->
+		<dependency>
+			<groupId>br.com.adrianomenezes</groupId>
+			<artifactId>cqrs.core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>br.com.adrianomenezes</groupId>
+			<artifactId>account.common</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>

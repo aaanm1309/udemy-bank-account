@@ -29,7 +29,7 @@ public class AccountEventSourceHandler implements EventSourceHandler {
             aggregate.replayEvents(events);
             var latestVersion = events.stream()
                     .map(x -> x.getVersion()).max(Comparator.naturalOrder());
-
+            aggregate.setVersion(latestVersion.get());
         }
         return  aggregate;
     }
